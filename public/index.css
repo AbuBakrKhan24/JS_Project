@@ -12,12 +12,20 @@ section {
   background-image: url("./sawa's\ home.png");
   background-size: cover;
   opacity: 0.8 black;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .title {
   color: white;
   text-shadow: 2px 2px #38435a;
   text-align: center;
+}
+
+.head_content {
+  margin-bottom: 20%;
 }
 
 .form-control:focus {
