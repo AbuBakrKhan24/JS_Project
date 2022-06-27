@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  min-height: 100vh;
+}
+
+#landing_page {
+  background-image: url("./sawa's\ home.png");
+  background-size: cover;
+  opacity: 0.8 black;
+}
+
+.title {
+  color: white;
+  text-shadow: 2px 2px #38435a;
+  text-align: center;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #212529;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(61, 64, 70, 0.25);
+}
+
+button {
+  margin-right: 10%;
+}
+
+.search_btn {
+  width: 145px;
+}
