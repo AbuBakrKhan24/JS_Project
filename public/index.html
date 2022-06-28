@@ -5,6 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Project</title>
+
+    <!-- GET THESE FROM OWL CAROUSEL CDN -->
+    <!-- https://cdnjs.com/libraries/OwlCarousel2 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- CSS only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
@@ -16,65 +33,6 @@
   </head>
   <body>
     <main>
-      <div class="search">
-        <nav class="navbar navbar-expand-lg bg-light shadow-lg p-3 bg-body">
-          <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <button
-                  class="btn btn-outline-secondary dropdown-toggle"
-                  type="button"
-                  id="defaultDropdown"
-                  data-bs-toggle="dropdown"
-                  data-bs-auto-close="true"
-                  aria-expanded="false"
-                >
-                  Property Type
-                </button>
-                <button
-                  class="btn btn-outline-secondary dropdown-toggle"
-                  type="button"
-                  id="defaultDropdown"
-                  data-bs-toggle="dropdown"
-                  data-bs-auto-close="true"
-                  aria-expanded="false"
-                >
-                  All Cities
-                </button>
-                <button
-                  class="btn btn-outline-secondary dropdown-toggle"
-                  type="button"
-                  id="defaultDropdown"
-                  data-bs-toggle="dropdown"
-                  data-bs-auto-close="true"
-                  aria-expanded="false"
-                >
-                  Bedrooms
-                </button>
-                <button
-                  class="btn btn-outline-secondary dropdown-toggle"
-                  type="button"
-                  id="defaultDropdown"
-                  data-bs-toggle="dropdown"
-                  data-bs-auto-close="true"
-                  aria-expanded="false"
-                >
-                  Max. Price
-                </button>
-              </ul>
-
-              <form class="d-flex" role="search">
-                <button
-                  class="search_btn btn btn-outline-secondary"
-                  type="submit"
-                >
-                  Search
-                </button>
-              </form>
-            </div>
-          </div>
-        </nav>
-      </div>
       <section id="landing_page">
         <div class="container head_content">
           <header class="title">
@@ -83,10 +41,230 @@
           </header>
         </div>
       </section>
-      <section id="properties"></section>
-      <footer></footer>
-    </main>
+      <!-- <div class="card w-50">
+        <div class="card-body">
+          <ul>
+            <button
+              class="btn btn-outline-secondary dropdown-toggle"
+              type="button"
+              id="defaultDropdown"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="true"
+              aria-expanded="false"
+            >
+              Property Type
+            </button>
+            <button
+              class="btn btn-outline-secondary dropdown-toggle"
+              type="button"
+              id="defaultDropdown"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="true"
+              aria-expanded="false"
+            >
+              All Cities
+            </button>
+            <button
+              class="btn btn-outline-secondary dropdown-toggle"
+              type="button"
+              id="defaultDropdown"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="true"
+              aria-expanded="false"
+            >
+              Bedrooms
+            </button>
+            <button
+              class="btn btn-outline-secondary dropdown-toggle"
+              type="button"
+              id="defaultDropdown"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="true"
+              aria-expanded="false"
+            >
+              Max. Price
+            </button>
+          </ul>
 
+          <form class="d-flex" role="search">
+            <button class="search_btn btn btn-outline-secondary" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div> -->
+      <!-- <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul> -->
+      <section id="properties">
+        <header class="title">
+          <h1>Discover Our Featured Listings</h1>
+          <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit</i></p>
+        </header>
+
+        <div class="container-fluid">
+          <!-- YOU NEED THIS CLASS HERE -->
+          <div class="owl-carousel">
+            <div class="p-3">
+              <div class="card properties_block" style="width: 18rem">
+                <img
+                  src="./Chitanda Family House.jpeg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Chitanda Family House</h5>
+                  <card_details>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <i>icon</i>
+                    <p>House</p>
+                  </card_details>
+                </div>
+                <hr />
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+            <div class="p-3">
+              <div class="card properties_block" style="width: 18rem">
+                <img src="./sawa's home.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Sawa's home</h5>
+                  <card_details>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <i>icon</i>
+                    <p>House</p>
+                  </card_details>
+                </div>
+                <hr />
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+            <div class="p-3">
+              <div class="card properties_block" style="width: 18rem">
+                <img
+                  src="./Kagome's Home.jpeg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Kagome's Home</h5>
+                  <card_details>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <i>icon</i>
+                    <p>House</p>
+                  </card_details>
+                </div>
+                <hr />
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+            <div class="p-3">
+              <div class="card properties_block" style="width: 18rem">
+                <img
+                  src="./Glass Workshop.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Glass Workshop</h5>
+                  <card_details>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <i>icon</i>
+                    <p>House</p>
+                  </card_details>
+                </div>
+                <hr />
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+            <div class="p-3">
+              <div class="card properties_block" style="width: 18rem">
+                <img src="./Citrus.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Citrus</h5>
+                  <card_details>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <i>icon</i>
+                    <p>House</p>
+                  </card_details>
+                </div>
+                <hr />
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+            <div class="p-3">
+              <div class="card properties_block" style="width: 18rem">
+                <img src="./sawa's home.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Sawa's home</h5>
+                  <card_details>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <i>icon</i>
+                    <p>House</p>
+                  </card_details>
+                </div>
+                <hr />
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-dark text-light footer-area">
+      <div class="container">
+        <span>Copyright © 2022 Abu-Bakr Khan | All Rights Reserved </span>
+      </div>
+    </footer>
+
+    <!-- IMPORT JQUERY FIRST -->
+    <!-- https://releases.jquery.com/ -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
     <script src="./index.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script
@@ -94,5 +272,22 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- YOU CAN UPDATE AND EDIT OPTIONS HERE -->
+    <!-- https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html -->
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          autoplay: true,
+          items: 4,
+          loop: true,
+        });
+      });
+    </script>
   </body>
 </html>
