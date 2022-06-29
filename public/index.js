@@ -5,10 +5,12 @@
 //   ? JSON.parse(localStorage.getItem("Stored_Info"))
 //   :
 
-let items = [
+let properties = [
   {
     id: 1,
-    product: "TV Stand",
+    property_type: "House",
+    title: "Chitanda Family House",
+
     createDate: new Date(),
   },
 ];

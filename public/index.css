@@ -24,9 +24,9 @@ section {
   text-align: center;
 }
 
-.head_content {
+/* .head_content {
   margin-bottom: 20%;
-}
+} */
 
 .form-control:focus {
   color: #212529;
@@ -152,7 +152,16 @@ img {
   display: none;
 }
 
-/* Cards */
+.badge {
+  border-radius: 0;
+}
+
+.badge_div {
+  height: 100%;
+  margin-top: -25px;
+  margin-left: -20px;
+}
+/*propery Cards done */
 /* footer */
 .footer-area .container {
   display: flex;
@@ -163,3 +172,14 @@ img {
   padding-top: 20px;
 }
 /* footer done */
+
+@media (max-width: 1168.73px) {
+  .col-md-4 {
+    display: flex;
+  }
+}
+@media (max-width: 1000px) {
+  col-md2-5 {
+    display: flex;
+  }
+}
