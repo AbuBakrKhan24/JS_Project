@@ -6,6 +6,7 @@
 
 section {
   min-height: 100vh;
+
 }
 
 #landing_page {
@@ -24,17 +25,29 @@ section {
   text-align: center;
 }
 
-/* .head_content {
-  margin-bottom: 20%;
-} */
-
-.form-control:focus {
-  color: #212529;
-  background-color: #fff;
-  border-color: #212529;
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(61, 64, 70, 0.25);
+/* Sort & Filter */
+.sort-filter {
+  justify-content: center;
+  display: flex;
+  border: 1px solid;
+  border-radius: 6px;
+  /* padding: 40px; */
+  backdrop-filter: blur(5px);
+  height: 100px;
+    width: 100%;
 }
+
+select {
+  width: 130px;
+}
+
+label {
+  /* display: inline-block; */
+  display: flex;
+  flex-direction: column;
+}
+/* Sort & Filter Done */
+
 
 button {
   margin-right: 10%;
@@ -142,6 +155,7 @@ img {
   justify-content: end;
   opacity: 1;
   transition: all 0.3s linear;
+  backdrop-filter: blur(5px);
 }
 
 .staff:hover .staff-details {
@@ -153,7 +167,7 @@ img {
 }
 
 .badge {
-  border-radius: 0;
+  border-radius: 1;
 }
 
 .badge_div {

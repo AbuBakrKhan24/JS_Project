@@ -41,72 +41,7 @@
           </header>
         </div>
       </section>
-      <!-- <div class="card w-50">
-        <div class="card-body">
-          <ul>
-            <button
-              class="btn btn-outline-secondary dropdown-toggle"
-              type="button"
-              id="defaultDropdown"
-              data-bs-toggle="dropdown"
-              data-bs-auto-close="true"
-              aria-expanded="false"
-            >
-              Property Type
-            </button>
-            <button
-              class="btn btn-outline-secondary dropdown-toggle"
-              type="button"
-              id="defaultDropdown"
-              data-bs-toggle="dropdown"
-              data-bs-auto-close="true"
-              aria-expanded="false"
-            >
-              All Cities
-            </button>
-            <button
-              class="btn btn-outline-secondary dropdown-toggle"
-              type="button"
-              id="defaultDropdown"
-              data-bs-toggle="dropdown"
-              data-bs-auto-close="true"
-              aria-expanded="false"
-            >
-              Bedrooms
-            </button>
-            <button
-              class="btn btn-outline-secondary dropdown-toggle"
-              type="button"
-              id="defaultDropdown"
-              data-bs-toggle="dropdown"
-              data-bs-auto-close="true"
-              aria-expanded="false"
-            >
-              Max. Price
-            </button>
-          </ul>
-
-          <form class="d-flex" role="search">
-            <button class="search_btn btn btn-outline-secondary" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-      </div> -->
-      <!-- <ul class="nav nav-pills"> 
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-      </ul> -->
+     
       <!-- This is a section that does not want to do mobile response -->
       <!-- <section id="properties">
         <header class="title">
@@ -258,7 +193,39 @@
             <h1>Check Our Selection Of Finest Properties</h1>
             <p><i>“Move to What Moves You” -Halstead Property</i></p>
           </header>
-          <div class="row">
+            <div class="container sort-filter">
+              <div class="row">
+                <div class="col-md-4">
+              <label>LOOKING FOR
+                <select name="referrer">
+                  <option value="">(Property Type)</option>
+                  <option value="1">House</option>
+                  <option value="2">Apartment</option>
+                </label> 
+              </select>
+            </div>
+                <div class="col-md-4">
+              <label>Rent/Sale
+                <select name="referrer">
+                  <option value="">(Select one)</option>
+                  <option value="1">Rent</option>
+                  <option value="1">Sale</option>
+                </label> 
+              </select>
+            </div>
+                <div class="col-md-4">
+              <label>Price
+                <select name="referrer">
+                  <option value="">(Choose order)</option>
+                  <option value="1">Ascending</option>
+                  <option value="2">Descending</option>
+                </label> 
+              </select>
+            </div>
+              </div>
+            </div>
+  
+          <div class="row" id="propertyHolder">
             <div class="col-md-4 col-sm-6">
               <div class="staff">
                 <img
@@ -363,9 +330,9 @@
                   <div class="badge_div">
                     <span class="badge text-bg-primary">For Rent</span>
                   </div>
-                  <h5>Name</h5>
-                  <p>Occupation</p>
-                  links
+                  <h5>Apartment</h5>
+                  <p>Busy neighbourhood but Friendly, different markets nearby 3km away.</p>
+                  R5 000 per month
                 </div>
               </div>
             </div>
@@ -379,9 +346,9 @@
                   <div class="badge_div">
                     <span class="badge text-bg-success">For Sale</span>
                   </div>
-                  <h5>Name</h5>
-                  <p>Occupation</p>
-                  links
+                  <h5>House</h5>
+                  <p>Luxurious home, very spaciuos, enough for 3 families to live in.</p>
+                  R7 000 000
                 </div>
               </div>
             </div>
@@ -395,9 +362,9 @@
                   <div class="badge_div">
                     <span class="badge text-bg-primary">For Rent</span>
                   </div>
-                  <h5>Name</h5>
-                  <p>Occupation</p>
-                  links
+                  <h5>House</h5>
+                  <p>Cosy house for a family starting out, market place 8km away and neighbourhood is Friendly but quiet.</p>
+                  R4 000 per month
                 </div>
               </div>
             </div>
@@ -411,9 +378,9 @@
                   <div class="badge_div">
                     <span class="badge text-bg-success">For Sale</span>
                   </div>
-                  <h5>Name</h5>
-                  <p>Occupation</p>
-                  links
+                  <h5>House</h5>
+                  <p>Beautiful home with a fresh air in its atmosphere, garderns to grow your crops and flowers.</p>
+                  R1 250 000
                 </div>
               </div>
             </div>
@@ -427,9 +394,9 @@
                   <div class="badge_div">
                     <span class="badge text-bg-primary">For Rent</span>
                   </div>
-                  <h5>Name</h5>
-                  <p>Occupation</p>
-                  links
+                  <h5>House</h5>
+                  <p>Nice house to live in with beautiful scenery, open fields and lots of free space, marketplace is far 120km away.</p>
+                  R4 000
                 </div>
               </div>
             </div>
@@ -443,9 +410,9 @@
                   <div class="badge_div">
                     <span class="badge text-bg-success">For Sale</span>
                   </div>
-                  <h5>Name</h5>
-                  <p>Occupation</p>
-                  links
+                  <h5>House</h5>
+                  <p>Beautiful cosy house for a nice loving family, busy and Friendly neighbourhood.</p>
+                  R2 500 000
                 </div>
               </div>
             </div>
@@ -459,9 +426,9 @@
                   <div class="badge_div">
                     <span class="badge text-bg-primary">For Rent</span>
                   </div>
-                  <h5>Name</h5>
-                  <p>Occupation</p>
-                  links
+                  <h5>House</h5>
+                  <p>Beautiful home for a family that is starting out, loving neighbours and very Friendly.</p>
+                  R3 500
                 </div>
               </div>
             </div>
