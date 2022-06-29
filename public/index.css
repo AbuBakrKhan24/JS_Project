@@ -9,7 +9,7 @@ section {
 }
 
 #landing_page {
-  background-image: url("./sawa's\ home.png");
+  background-image: url("./Images/Background/Landing Page/sawa's\ home.png");
   background-size: cover;
   opacity: 0.8 black;
   display: flex;
@@ -44,12 +44,9 @@ button {
   width: 145px;
 }
 
-.card {
-}
-
 /* property section */
 #properties {
-  background-image: url("./miami-beach.jpg");
+  background-image: url("./Images/Background/Property Listing/miami-beach.jpg");
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -98,6 +95,64 @@ img {
   overflow: hidden;
 }
 
+/* property_cards */
+#property_cards {
+  background-image: url("./Images/Background/Property Cards/scene\ background.jpg");
+  background-size: cover;
+  padding: 10%;
+}
+
+.title {
+  margin-bottom: 5%;
+}
+/* property_cards done */
+
+/* Cards */
+.staff {
+  position: relative;
+  width: 328.33px;
+  height: 246.24px;
+}
+
+.staff img {
+  width: 328.33px;
+  height: 246.24px;
+}
+
+.col-md-4 {
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+
+.staff-details {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+
+.staff:hover .staff-details {
+  opacity: 0;
+}
+
+.extras {
+  display: none;
+}
+
+/* Cards */
 /* footer */
 .footer-area .container {
   display: flex;
