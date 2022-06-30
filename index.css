@@ -6,7 +6,6 @@
 
 section {
   min-height: 100vh;
-
 }
 
 #landing_page {
@@ -33,21 +32,28 @@ section {
   border-radius: 6px;
   /* padding: 40px; */
   backdrop-filter: blur(5px);
-  height: 100px;
-    width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 select {
   width: 130px;
+  background-color: rgba(255, 0, 0, -5.1);
+  border: 2px solid black;
+}
+
+select:focus-visible {
+  overflow: none !important;
 }
 
 label {
   /* display: inline-block; */
   display: flex;
   flex-direction: column;
+  color: white;
+  text-shadow: 2px 2px #38435a;
 }
 /* Sort & Filter Done */
-
 
 button {
   margin-right: 10%;
@@ -124,7 +130,7 @@ img {
 .staff {
   position: relative;
   width: 348.33px;
-  height: 286.24px;
+  max-height: 286.24px;
 }
 
 .staff img {
@@ -195,5 +201,26 @@ img {
 @media (max-width: 1000px) {
   col-md2-5 {
     display: flex;
+  }
+}
+
+@media (max-width: 1168.73px) {
+  .selector {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 575px) {
+  .col-sm-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+@media (min-width: 860px) {
+  .col-md-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
   }
 }
