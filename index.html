@@ -29,6 +29,9 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
@@ -187,7 +190,7 @@
           </div>
         </div>
       </section> -->
-      <section id="property_cards" class="min-vh-100 bg-darkbg-dark text-dark">
+      <section id="property_cards" class="min-vh-100 bg-darkbg-light text-dark">
         <div class="container">
           <header class="title">
             <h1>Check Our Selection Of Finest Properties</h1>
@@ -195,7 +198,7 @@
           </header>
             <div class="container sort-filter">
               <div class="row">
-                <div class="col-md-4 selector">
+                <div class="col-md-3 mt-2 mb-3 selector">
               <label>Looking For
                 <select name="referrer">
                   <option value="">(Property Type)</option>
@@ -204,7 +207,7 @@
                 </label> 
               </select>
             </div>
-                <div class="col-md-4 selector">
+                <div class="col-md-3 mt-2 mb-3 selector">
               <label>Rent/Sale
                 <select name="referrer">
                   <option value="">(Select one)</option>
@@ -213,7 +216,7 @@
                 </label> 
               </select>
             </div>
-                <div class="col-md-4 selector">
+                <div class="col-md-3 mt-2 mb-3 selector">
               <label>Price
                 <select name="referrer">
                   <option value="">(Choose order)</option>
@@ -222,216 +225,23 @@
                 </label> 
               </select>
             </div>
+            <div class="col-md-3 mt-2 mb-3 selector">
+              <label>Sold/Pending
+                <select name="referrer">
+                  <option value="">(Choose option)</option>
+                  <option value="1">Sold</option>
+                  <option value="2">Pending</option>
+                </label> 
+              </select>
+            </div>
+            <div class="button_div">
+            <button id="Btn" class="search_btn mb-3" >Search</button>
+          </div>
               </div>
             </div>
-  
-          <div class="row" id="propertyHolder">
-            <div class="col-md-4 col-sm-6">
-              <div class="staff">
-                <img
-                  class="img-fluid"
-                  src="https://raw.githubusercontent.com/AbuBakrKhan24/JS_Project/main/public/Images/Property%201/Chitanda%20Family%20House.jpeg"
-                />
-                <div class="staff-details">
-                  <div class="badge_div">
-                    <span class="badge text-bg-primary">For Rent</span>
-                  </div>
-
-                  <h5>House</h5>
-                  <p>
-                    Quiet place, You can visit its exclusive fashion stores.
-                  </p>
-                  R4 500 per month
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="staff">
-                <img
-                  class="img-fluid"
-                  src="https://raw.githubusercontent.com/AbuBakrKhan24/JS_Project/main/public/Images/Property%202/sawa's%20home.png"
-                />
-                <div class="staff-details">
-                  <div class="badge_div">
-                    <span class="badge text-bg-success">For Sale</span>
-                  </div>
-                  <h5>House</h5>
-                  <p>
-                    Quiet neighbourhood, park close by and beautiful scenery
-                  </p>
-                  R950 000
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="staff">
-                <img
-                  class="img-fluid"
-                  src="https://raw.githubusercontent.com/AbuBakrKhan24/JS_Project/main/public/Images/Property%203/Kagome's%20Home.jpeg"
-                />
-                <div class="staff-details">
-                  <div class="badge_div">
-                    <span class="badge text-bg-primary">For Rent</span>
-                  </div>
-                  <h5>Apartment</h5>
-                  <p>
-                    Friendly neighbours, grocery store 5km away public transpot
-                    30m away and no pets allowed.
-                  </p>
-                  R2 500 per month
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="staff">
-                <img
-                  class="img-fluid"
-                  src="https://raw.githubusercontent.com/AbuBakrKhan24/JS_Project/main/public/Images/Property%204/Glass%20Workshop.png"
-                />
-                <div class="staff-details">
-                  <div class="badge_div">
-                    <span class="badge text-bg-success">For Sale</span>
-                  </div>
-                  <h5>House</h5>
-                  <p>
-                    Beautiful decor and scenery, marketplace 3km away quiet
-                    neighbourhood.
-                  </p>
-                  R2 000 000
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="staff">
-                <img
-                  class="img-fluid"
-                  src="https://raw.githubusercontent.com/AbuBakrKhan24/JS_Project/main/public/Images/Property%205/Citrus.jpg"
-                />
-                <div class="staff-details">
-                  <div class="badge_div">
-                    <span class="badge text-bg-primary">For Rent</span>
-                  </div>
-                  <h5>Apartment</h5>
-                  <p>
-                    Busy neighbourhood but Friendly, very spaciuos market place
-                    5km away and pets allowed.
-                  </p>
-                  R8 000 per month
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="staff">
-                <img
-                  class="img-fluid"
-                  src="https://raw.githubusercontent.com/AbuBakrKhan24/JS_Project/main/public/Images/Property%206/El%20Nuevo.jpg"
-                />
-                <div class="staff-details">
-                  <div class="badge_div">
-                    <span class="badge text-bg-primary">For Rent</span>
-                  </div>
-                  <h5>Apartment</h5>
-                  <p>Busy neighbourhood but Friendly, different markets nearby 3km away.</p>
-                  R5 000 per month
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="staff">
-                <img
-                  class="img-fluid"
-                  src="https://raw.githubusercontent.com/AbuBakrKhan24/JS_Project/main/public/Images/Property%207/Rose%20Hill%20Ct.jpg"
-                />
-                <div class="staff-details">
-                  <div class="badge_div">
-                    <span class="badge text-bg-success">For Sale</span>
-                  </div>
-                  <h5>House</h5>
-                  <p>Luxurious home, very spaciuos, enough for 3 families to live in.</p>
-                  R7 000 000
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="staff">
-                <img
-                  class="img-fluid"
-                  src="https://raw.githubusercontent.com/AbuBakrKhan24/JS_Project/main/public/Images/Property%208/Victorique's%20House.jpeg"
-                />
-                <div class="staff-details">
-                  <div class="badge_div">
-                    <span class="badge text-bg-primary">For Rent</span>
-                  </div>
-                  <h5>House</h5>
-                  <p>Cosy house for a family starting out, market place 8km away and neighbourhood is Friendly but quiet.</p>
-                  R4 000 per month
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="staff">
-                <img
-                  class="img-fluid"
-                  src="https://raw.githubusercontent.com/AbuBakrKhan24/JS_Project/main/public/Images/Property%209/Farm%20(Anime%20Background)%20002%20D.jpg"
-                />
-                <div class="staff-details">
-                  <div class="badge_div">
-                    <span class="badge text-bg-success">For Sale</span>
-                  </div>
-                  <h5>House</h5>
-                  <p>Beautiful home with a fresh air in its atmosphere, garderns to grow your crops and flowers.</p>
-                  R1 250 000
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="staff">
-                <img
-                  class="img-fluid"
-                  src="https://github.com/AbuBakrKhan24/JS_Project/blob/main/public/Images/Property%2010/2713947.jpg?raw=true"
-                />
-                <div class="staff-details">
-                  <div class="badge_div">
-                    <span class="badge text-bg-primary">For Rent</span>
-                  </div>
-                  <h5>House</h5>
-                  <p>Nice house to live in with beautiful scenery, open fields and lots of free space, marketplace is far 120km away.</p>
-                  R4 000
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="staff">
-                <img
-                  class="img-fluid"
-                  src="https://raw.githubusercontent.com/AbuBakrKhan24/JS_Project/main/public/Images/Property%2011/urban.jpg"
-                />
-                <div class="staff-details">
-                  <div class="badge_div">
-                    <span class="badge text-bg-success">For Sale</span>
-                  </div>
-                  <h5>House</h5>
-                  <p>Beautiful cosy house for a nice loving family, busy and Friendly neighbourhood.</p>
-                  R2 500 000
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="staff">
-                <img
-                  class="img-fluid"
-                  src="https://raw.githubusercontent.com/AbuBakrKhan24/JS_Project/main/public/Images/Property%2012/2713955.jpg"
-                />
-                <div class="staff-details">
-                  <div class="badge_div">
-                    <span class="badge text-bg-primary">For Rent</span>
-                  </div>
-                  <h5>House</h5>
-                  <p>Beautiful home for a family that is starting out, loving neighbours and very Friendly.</p>
-                  R3 500
-                </div>
-              </div>
-            </div>
+  <!-- Property Cards -->
+  <div class="row" id="propertyHolder">
+           
           </div>
         </div>
       </section>
