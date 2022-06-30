@@ -127,7 +127,7 @@ let properties = [
 //Show Properties
 function showProperty(properties) {
   document.querySelector("#propertyHolder").innerHTML = "";
-  properties.forEach((property) => {
+  properties.forEach((property, id) => {
     console.log(property);
     document.getElementById("propertyHolder").innerHTML += `
     <table class="table">
@@ -150,7 +150,7 @@ function showProperty(properties) {
               <td class="price">R${property.price} ${
       property.badge == "For Sale" ? "" : "pm"
     }</td>
-              <td><div class="edit_buttons"><i class="fa-solid fa-trash bin onclick="deleteProperty(id)"></i><i class="fa-solid fa-pen edit" onclick="editProperty(id);"></i></div></td>
+              <td><div class="edit_buttons"><button class="delete" onclick="deleteProperty(${property.id});"><i class="fa-solid fa-trash-can"></i></button><i class="fa-solid fa-pen edit" onclick="editProperty(id);"></i></div></td>
             </tr>
           </tbody>
         </table>
@@ -219,12 +219,12 @@ function addProperty() {
 // }
 
 function deleteProperty(id) {
-  objectives = objectives.filter((item) => {
+  properties = properties.filter((property) => {
     //Goes through the array and filters out every id that is equal to the selected one
-    return item.id !== id; //Returns all objects in the array that is not the same id as the selected one
+    return property.id !== id; //Returns all objects in the array that is not the same id as the selected one
   });
-  addToStorage(objectives); // Adds to local storage
-  showItems(properties); //Displays the array
+  // addToStorage(properties); // Adds to local storage
+  showProperty(properties); //Displays the array
 }
 
 
