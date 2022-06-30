@@ -1,6 +1,8 @@
-let properties = JSON.parse(localStorage.getItem("Property_Info"))
-? JSON.parse(localStorage.getItem("Property_Info"))
-:  [
+// JSON.parse(localStorage.getItem("Property_Info"))
+// ? JSON.parse(localStorage.getItem("Property_Info"))
+// :  
+
+let properties = [
       {
         id: 1,
         property_type: "House",
@@ -206,14 +208,25 @@ function addProperty() {
 }
 
 // Delete function
+// function deleteProperty(id) {
+//   let index = properties.indexOf (property => {
+//     property.id === id
+//   })
+//   property = properties.splice(index, 1)
+//   console.log(properties);
+//   localStorage.setItem("Property_Info", JSON.stringify(properties));
+//   showProperty(properties);
+// }
+
 function deleteProperty(id) {
-  properties = properties.filter((property) => {
-    property.id !== id;
+  objectives = objectives.filter((item) => {
+    //Goes through the array and filters out every id that is equal to the selected one
+    return item.id !== id; //Returns all objects in the array that is not the same id as the selected one
   });
-  console.log(properties);
-  localStorage.setItem("Property_Info", JSON.stringify(properties));
-  showProperty(properties);
+  addToStorage(objectives); // Adds to local storage
+  showItems(properties); //Displays the array
 }
+
 
 // Edit function
 function editProperty(id) {
