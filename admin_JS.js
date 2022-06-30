@@ -128,35 +128,32 @@ function showProperty(properties) {
   properties.forEach((property) => {
     console.log(property);
     document.getElementById("propertyHolder").innerHTML += `
-      <div class="col-md-4 col-sm-6">
-              <div class="staff">
-                <img id="property_img"
-                  class="img-fluid"
-                  src="${property.property_img}"
-                />
-                <div class="staff-details">
-                  <div class="badge_div" >
-                    <span class="badge text-bg-primary" id="sale/rent">${
-                      property.badge
-                    }</span>
-                  </div>
-                  
-
-                  <h5 id="property_type">${property.property_type}</h5>
-                  <p id="property_details">
-                    ${property.description}
-                  </p>
-                  <div>R 
-                  <span id="price">
-                    ${property.price} ${
+    <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">House/Apartment</th>
+              <th scope="col">Image-link</th>
+              <th scope="col">Description</th>
+              <th scope="col">Price</th>
+              <th scope="col">Customize</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">${property.id}</th>
+              <td>${property.property_type} ${property.badge}</td>
+              <td><img src="${property.property_img}"></td>
+              <td class="desc">${property.description}</td>
+              <td class="price">R${property.price} ${
       property.badge == "For Sale" ? "" : "pm"
-    }
-                  </span> 
-                  
-                </div>
-                </div>
-              </div>
-            </div>
+    }</td>
+              <td><div class="edit_buttons"><i class="fa-solid fa-trash bin"></i><i class="fa-solid fa-pen edit" onclick="editProperty(${
+                properties.id
+              });"></i></div></td>
+            </tr>
+          </tbody>
+        </table>
       `;
   });
 }
@@ -222,8 +219,8 @@ function deleteProperty(id) {
 
 // Edit function
 function editProperty(id) {
-  let = properties.find((property) => property.id === id);
-  property.property_type = "new";
+  let = properties.find((properties) => properties.id === id);
+  properties.property_type = "new";
 }
 
 // add this to button in html
