@@ -1,6 +1,6 @@
 let properties = JSON.parse(localStorage.getItem("Property_Info"))
-  ? JSON.parse(localStorage.getItem("Property_Info"))
-  : [
+? JSON.parse(localStorage.getItem("Property_Info"))
+:  [
       {
         id: 1,
         property_type: "House",
@@ -148,9 +148,7 @@ function showProperty(properties) {
               <td class="price">R${property.price} ${
       property.badge == "For Sale" ? "" : "pm"
     }</td>
-              <td><div class="edit_buttons"><i class="fa-solid fa-trash bin"></i><i class="fa-solid fa-pen edit" onclick="editProperty(${
-                properties.id
-              });"></i></div></td>
+              <td><div class="edit_buttons"><i class="fa-solid fa-trash bin onclick="deleteProperty(id)"></i><i class="fa-solid fa-pen edit" onclick="editProperty(id);"></i></div></td>
             </tr>
           </tbody>
         </table>
@@ -163,36 +161,36 @@ showProperty(properties);
 function addProperty() {
   NewProperty = {
     id: properties.length + 1,
-    property_type: document.getElementById("add_info").value,
-    property_img: document.getElementById("add_info").value,
-    badge: document.getElementById("add_info").value,
-    description: document.getElementById("add_info").value,
-    price: document.getElementById("add_info").value,
+    property_type: document.getElementById("property_type").value,
+    property_img: document.getElementById("image_link").value,
+    badge: document.getElementById("rent_sale").value,
+    description: document.getElementById("desc").value,
+    price: document.getElementById("price_given").value,
   };
-  items.push(NewProperty);
+  properties.push(NewProperty);
   document.getElementById("propertyHolder").innerHTML += `
   <div class="col-md-4 col-sm-6">
               <div class="staff">
                 <img id="property_img"
                   class="img-fluid"
-                  src="${property.property_img}"
+                  src="${NewProperty.property_img}"
                 />
                 <div class="staff-details">
                   <div class="badge_div" >
                     <span class="badge text-bg-primary" id="sale/rent">${
-                      property.badge
+                      NewProperty.badge
                     }</span>
                   </div>
                   
 
-                  <h5 id="property_type">${property.property_type}</h5>
+                  <h5 id="property_type">${NewProperty.property_type}</h5>
                   <p id="property_details">
-                    ${property.description}
+                    ${NewProperty.description}
                   </p>
                   <div>R 
                   <span id="price">
-                    ${property.price} ${
-    property.badge == "For Sale" ? "" : "pm"
+                    ${NewProperty.price} ${
+    NewProperty.badge == "For Sale" ? "" : "pm"
   }
                   </span> 
                   

@@ -16,12 +16,85 @@
     <link rel="stylesheet" href="./admin_styles.css" />
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Properties</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+       
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Add New Property
+        </button>
+          
+        
+      </div>
+    </nav>
     <!-- <form onsubmit="event.preventDefault(); addProperty()">
       <div class="adding_items">
         <button type="submit" class="btn btn-dark">Submit</button>
       </div>
     </form> -->
     <div class="container" id="propertyHolder"></div>
+
+
+<!-- Modal -->
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Add your listing here</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container sort-filter">
+          <form  onsubmit="event.preventDefault(); addProperty()">
+            <div class="selector">
+          <label>House/Apartment
+            <select name="referrer" id="property_type">
+              <option value="">(Property Type)</option>
+              <option value="House">House</option>
+              <option value="Apartment">Apartment</option>
+            </select>
+            </label> 
+        </div>
+        <div class="selector">
+      <label>Rent/Sale
+        <select name="referrer" id="rent_sale">
+          <option value="">(Select one)</option>
+          <option value="Rent">Rent</option>
+          <option value="Sale">Sale</option>
+        </select>
+        </label> 
+    </div>
+        <div class="selector">
+          <label>Image-link: <input type="text" name="Image" required id="image_link" /></label>
+        </div>
+        <!-- <div class="selector">
+    <label>Upload pictures: <input type="file" name="file" id="image_link" /></label>
+  </div> -->
+        <label>Description:
+          <textarea name="bio" rows="3" cols="30" id="desc" placeholder="The neighbourhood is kinda nice..."></textarea>
+			  </label>
+            <div class="selector">
+              <label>Price: <input type="number" name="Price" id="price_given" required /></label>
+        </div>
+ 
+      
+
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        
+        <input type="submit" class="btn btn-primary" value="Add Property" />
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
 
     <!-- JavaScript Bundle with Popper -->
     <script

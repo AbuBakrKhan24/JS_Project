@@ -43,3 +43,28 @@ i {
   color: brown;
 }
 /* Edit button done */
+
+
+/* Modal  */
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+    width: 100%;
+  min-height: 2em;
+}
+
+input, textarea {
+  
+  border: 1px solid #0a0a23;
+  /* width: 225.05px; */
+  
+}
+
+
+
+input[type="file"] {
+  padding: 1px 2px;
+}
+
+/* Modal  Done*/
