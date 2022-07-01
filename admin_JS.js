@@ -1,8 +1,8 @@
-// JSON.parse(localStorage.getItem("Property_Info"))
-// ? JSON.parse(localStorage.getItem("Property_Info"))
-// :  
+ 
 
-let properties = [
+let properties = JSON.parse(localStorage.getItem("Property_Info"))
+? JSON.parse(localStorage.getItem("Property_Info"))
+:  [
       {
         id: 1,
         property_type: "House",
@@ -150,7 +150,7 @@ function showProperty(properties) {
               <td class="price">R${property.price} ${
       property.badge == "For Sale" ? "" : "pm"
     }</td>
-              <td><div class="edit_buttons"><button class="delete" onclick="deleteProperty(${property.id});"><i class="fa-solid fa-trash-can"></i></button><i class="fa-solid fa-pen edit" onclick="editProperty(id);"></i></div></td>
+              <td><div class="edit_buttons"><i class="fa-solid fa-trash-can bin"  onclick="deleteProperty(${property.id});"></i><i class="fa-solid fa-pen edit" onclick="editProperty(id);"></i></div></td>
             </tr>
           </tbody>
         </table>
@@ -220,10 +220,10 @@ function addProperty() {
 
 function deleteProperty(id) {
   properties = properties.filter((property) => {
-    //Goes through the array and filters out every id that is equal to the selected one
-    return property.id !== id; //Returns all objects in the array that is not the same id as the selected one
+    
+    return property.id !== id; 
   });
-  // addToStorage(properties); // Adds to local storage
+  
   showProperty(properties); //Displays the array
 }
 

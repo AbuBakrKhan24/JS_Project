@@ -34,13 +34,13 @@ i {
 
 /* bin button */
 .bin:hover {
-  color: grey;
+  color: red;
 }
 /* bin button done */
 
 /* Edit button */
 .edit:hover {
-  color: brown;
+  color: blue;
 }
 /* Edit button done */
 
