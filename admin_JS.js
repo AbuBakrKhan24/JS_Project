@@ -1,7 +1,7 @@
  
 
-let properties = JSON.parse(localStorage.getItem("Property_Info"))
-? JSON.parse(localStorage.getItem("Property_Info"))
+let properties = JSON.parse(localStorage.getItem("PropertyInfo"))
+? JSON.parse(localStorage.getItem("PropertyInfo"))
 :  [
       {
         id: 1,
@@ -159,6 +159,12 @@ function showProperty(properties) {
 }
 showProperty(properties);
 
+
+// Add to local storage function
+function addToStorage(properties) {
+  localStorage.setItem("PropertyInfo", JSON.stringify(properties));
+}
+
 // Add function
 function addProperty() {
   NewProperty = {
@@ -203,7 +209,7 @@ function addProperty() {
   `;
 
   console.log(properties);
-  localStorage.setItem("Property_Info", JSON.stringify(properties));
+  addToStorage(properties);
   showProperty(properties);
 }
 
@@ -223,7 +229,7 @@ function deleteProperty(id) {
     
     return property.id !== id; 
   });
-  
+  addToStorage(properties); 
   showProperty(properties); //Displays the array
 }
 
@@ -233,6 +239,10 @@ function editProperty(id) {
   let = properties.find((properties) => properties.id === id);
   properties.property_type = "new";
 }
+
+
+
+
 
 // add this to button in html
 //  editProperty(${properties.id})
