@@ -1,6 +1,6 @@
  
 
-let properties = JSON.parse(localStorage.getItem("PropertyInfo"))
+const properties = JSON.parse(localStorage.getItem("PropertyInfo"))
 ? JSON.parse(localStorage.getItem("PropertyInfo"))
 :  [
       {
