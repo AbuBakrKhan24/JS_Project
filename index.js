@@ -1,7 +1,7 @@
 localStorage.removeItem('records');
 
 // Properties Array
-const properties = JSON.parse(localStorage.getItem("PropertyInfo"))
+let properties = JSON.parse(localStorage.getItem("PropertyInfo"))
 ? JSON.parse(localStorage.getItem("PropertyInfo"))
 :  [
       {

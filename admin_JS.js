@@ -1,6 +1,6 @@
  
 
-const properties = JSON.parse(localStorage.getItem("PropertyInfo"))
+let properties = JSON.parse(localStorage.getItem("PropertyInfo"))
 ? JSON.parse(localStorage.getItem("PropertyInfo"))
 :  [
       {
@@ -161,9 +161,9 @@ showProperty(properties);
 
 
 // Add to local storage function
-function addToStorage(properties) {
-  localStorage.setItem("PropertyInfo", JSON.stringify(properties));
-}
+// function addToStorage(properties) {
+//   localStorage.setItem("PropertyInfo", JSON.stringify(properties));
+// }
 
 // Add function
 function addProperty() {
@@ -209,7 +209,8 @@ function addProperty() {
   `;
 
   console.log(properties);
-  addToStorage(properties);
+  // addToStorage(properties);
+  localStorage.setItem("PropertyInfo", JSON.stringify(properties));
   showProperty(properties);
 }
 
@@ -229,7 +230,8 @@ function deleteProperty(id) {
     
     return property.id !== id; 
   });
-  addToStorage(properties); 
+  // addToStorage(properties); 
+  localStorage.setItem("PropertyInfo", JSON.stringify(properties));
   showProperty(properties); //Displays the array
 }
 
