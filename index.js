@@ -1,9 +1,10 @@
-localStorage.removeItem('records');
+// localStorage.removeItem('records');
+// JSON.parse(localStorage.getItem("PropertyInfo"))
+// ? JSON.parse(localStorage.getItem("PropertyInfo"))
+// : 
 
 // Properties Array
-let properties = JSON.parse(localStorage.getItem("PropertyInfo"))
-? JSON.parse(localStorage.getItem("PropertyInfo"))
-:  [
+let properties =  [
       {
         id: 1,
         property_type: "House",
